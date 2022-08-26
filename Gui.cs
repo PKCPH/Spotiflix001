@@ -11,12 +11,9 @@ namespace Spotiflix001
     {
         Data data = new Data();
 
-        //public string relativePath = Path.GetFullPath(@"..\\..\\..\\Helpers\listofwords.txt");
-
         private string path = Path.GetFullPath(@"..\\..\\SpotiflixData.json");
         public Gui()
         {
-            //data.MovieList.Add(new Movie() { WWW=@"https:\\netflix.com/rambo3.mp4", Title="Rambo III", Genre ="Action", ReleaseDate=new DateTime(1988,5,25), Length=new DateTime(1,1,1, 1, 42, 0)});
             while (true)
             {
                 Menu();
@@ -25,7 +22,7 @@ namespace Spotiflix001
 
         private void Menu()
         {
-            Console.WriteLine("\nMENU\n1 for movies\n2 for series\n3 for music\n4 for save\n5 for load");
+            Console.WriteLine("\nMENU\n1: Movies\n2: Series\n3: Music\n4: Save data\n5: Load data");
 
             switch (Console.ReadKey(true).Key)
             {
@@ -58,7 +55,7 @@ namespace Spotiflix001
         ///////////////////MOVIES/////////////////////
         private void MovieMenu()
         {
-            Console.WriteLine("\nMOVIE MENU\n1 for list of movies\n2 for search movies\n3 for add new movie");
+            Console.WriteLine("\nMOVIE MENU\n1: Show All Movies\n2: Search\n3: Add Movies");
 
             switch (Console.ReadKey(true).Key)
             {
@@ -123,7 +120,7 @@ namespace Spotiflix001
        
         private void SeriesMenu()
         {
-            Console.WriteLine("\nMOVIE MENU\n1 for list of movies\n2 for search movies\n3 for add new movie");
+            Console.WriteLine("\nMOVIE MENU\n1: Show All Series\n2: Search\n3: Add Series");
 
             switch (Console.ReadKey(true).Key)
             {
@@ -207,7 +204,7 @@ namespace Spotiflix001
 
         private void MusicMenu()
         {
-            Console.WriteLine("\nMOVIE MENU\n1 for list of movies\n2 for search movies\n3 for add new movie");
+            Console.WriteLine("\nMOVIE MENU\n1: Show All Music\n2: Search\n3: Add Music");
 
             switch (Console.ReadKey(true).Key)
             {
