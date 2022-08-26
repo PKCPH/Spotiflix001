@@ -46,6 +46,10 @@ namespace Spotiflix001
                 case ConsoleKey.D5:
                     LoadData();
                     break;
+                case ConsoleKey.NumPad6:
+                case ConsoleKey.D6:
+                    Search();
+                    break;
                 default:
                     break;
             }
@@ -55,7 +59,7 @@ namespace Spotiflix001
         ///////////////////MOVIES/////////////////////
         private void MovieMenu()
         {
-            Console.WriteLine("\nMOVIE MENU\n1: Show All Movies\n2: Search\n3: Add Movies");
+            Console.WriteLine("\nMOVIE MENU\n1: Show All Movies\n2: Search for Movie\n3: Add Movies");
 
             switch (Console.ReadKey(true).Key)
             {
@@ -318,6 +322,17 @@ namespace Spotiflix001
             while (input == null || input == "");
             return input;
         }
+
+        private void Search()
+        {
+            Console.Write("Search: ");
+            SearchMovie();
+            SearchMusic();
+            SearchSeries();
+
+        }
     }
+
+    
 }
 
