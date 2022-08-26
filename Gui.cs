@@ -10,7 +10,10 @@ namespace Spotiflix001
     internal class Gui
     {
         Data data = new Data();
-        private string path = @"c:\SpotiflixData.json";
+
+        //public string relativePath = Path.GetFullPath(@"..\\..\\..\\Helpers\listofwords.txt");
+
+        private string path = Path.GetFullPath(@"..\\..\\SpotiflixData.json");
         public Gui()
         {
             //data.MovieList.Add(new Movie() { WWW=@"https:\\netflix.com/rambo3.mp4", Title="Rambo III", Genre ="Action", ReleaseDate=new DateTime(1988,5,25), Length=new DateTime(1,1,1, 1, 42, 0)});
@@ -267,7 +270,7 @@ namespace Spotiflix001
         }
 
 
-        //other methods
+        //////////////OTHER METHODS//////////////////////
 
         private void SaveData()
         {
